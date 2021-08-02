@@ -4128,12 +4128,13 @@
 	<!-- MOUNT MANAGER-->
   <screen name="VIXDevicesPanel" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1920,1080">
 	<panel name="TemplateInformation"/>
+	<panel name="ButtonsVisionCore"/>
 	<widget source="list" render="Listbox" position="410,145" size="1490,650" backgroundColor="OE_Background" scrollbarSliderForegroundColor="blue_light" transparent="1" scrollbarMode="showOnDemand">
 	    <convert type="TemplatedMultiContent">
 	{"template": [
-	MultiContentEntryText(pos = (160, 10), size = (1160, 35), font=0, text = 0),
-	MultiContentEntryText(pos = (165, 50), size = (1160, 70), font=1, flags = RT_VALIGN_TOP| RT_WRAP, text = 1, color = 0x0000fafa, color_sel = 0x0000ffff),
-	MultiContentEntryPixmapAlphaBlend(pos = (5, 0), size = (80, 80), png = 2),
+	MultiContentEntryText(pos = (140, 10), size = (1340, 35), font=0, text = 0),
+	MultiContentEntryText(pos = (140, 50), size = (1340, 70), font=1, flags = RT_VALIGN_TOP| RT_WRAP, text = 1, color = 0x0000fafa, color_sel = 0x0000ffff),
+	MultiContentEntryPixmapAlphaBlend(pos = (30, 20), size = (80, 80), png = 2),
 	],
 	"fonts": [gFont("RegularBold", 26),gFont("RegularBold", 26)],
 	"itemHeight": 120
@@ -4141,13 +4142,15 @@
 	    </convert>
 	</widget>
 	<widget name="lab7" position="950,130" size="0,0" font="RegularBold;26" backgroundColor="OE_Background" foregroundColor="blue_light" halign="center" valign="center" transparent="1" zPosition="3"/>
-	<ePixmap pixmap="buttons/key_menu.png" position="160,900" size="64,43" alphatest="blend"/>
-	</screen>
-  <screen name="VIXDevicePanelConf" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1920,1080">
+  </screen>
+  <screen name="DeviceMountSetup" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1920,1080">
 	<panel name="TemplateInformation"/>
 	<panel name="TemplateSetupVisionCore"/>
+	<panel name="ButtonsVisionCore"/>
+	<eLabel backgroundColor="blue_light" name="" position="410,880" size="1490,2" zPosition="-9"/>
+	<widget source="lab7" render="Label" position="410,880" size="1490,70" font="RegularBold;28" backgroundColor="OE_Background" foregroundColor="blue_light" halign="center" valign="center" transparent="1" zPosition="3"/>
+	<widget name="lab7" position="410,880" size="1490,70" font="RegularBold;28" backgroundColor="OE_Background" halign="center" valign="center" transparent="1" zPosition="3"/>
 	<widget name="config" itemHeight="80" position="410,150" size="1490,740" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="blue_light" font="RegularBold;26" backgroundColor="OE_Background" transparent="1"/>
-	<widget name="Linconn" backgroundColor="OE_Background" foregroundColor="blue_light" position="455,850" size="1490,50" transparent="1" valign="top"/>
   </screen>
 	<!--VISION BACKUP MANAGER -->
   <screen name="VIXBackupManager" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1920,1080">
