@@ -40,7 +40,6 @@
 	<!-- <panel name="MainMenu"/> -->
   <screen name="MainMenu">
 	<panel name="Clock"/>
-	<panel name="TemplateMenuSort"/>
 	<ePixmap alphatest="blend" pixmap="colors/setting1.png" position="100,182" size="100,100" transparent="1" zPosition="10"/>
 	<eLabel backgroundColor="OE_NewBg2" foregroundColor="white" name="" position="20,center" size="270,850" zPosition="-10"/>
 	<eLabel backgroundColor="OE_Background" foregroundColor="OE_Background" name="" position="15,center" size="1380,770" zPosition="-15"/>
@@ -333,12 +332,9 @@
 	<panel name="TitleInformation"/>
 	<panel name="ButtonsInformation"/>
 	<ePixmap alphatest="blend" pixmap="picon_default.png" position="85,150" size="220,132" transparent="1" zPosition="10"/>
-	<widget source="lab1" render="Label" position="0,330" size="400,70" font="RegularBold;40" backgroundColor="OE_NewBg2" halign="center" valign="center" transparent="1" zPosition="3"/>
-	<widget source="lab2" render="Label" position="0,405" size="400,70" font="RegularBold;22" backgroundColor="OE_NewBg2" foregroundColor="blue_light" halign="center" valign="center" transparent="1" zPosition="3"/>
-	<widget source="lab3" render="Label" position="0,530" size="400,70" font="RegularBold;23" backgroundColor="OE_NewBg2" foregroundColor="blue_light" halign="center" valign="center" transparent="1" zPosition="3"/>
-	<widget source="lab4" render="Label" position="0,590" size="400,70" font="RegularBold;23" backgroundColor="OE_NewBg2" halign="center" valign="center" transparent="1" zPosition="3"/>
-	<widget source="lab5" render="Label" position="0,715" size="400,70" font="RegularBold;23" backgroundColor="OE_NewBg2" foregroundColor="blue_light" halign="center" valign="center" transparent="1" zPosition="3"/>
-	<widget source="lab6" render="Label" position="0,790" size="400,35" font="RegularBold;22" backgroundColor="OE_NewBg2" halign="center" valign="center" transparent="1" zPosition="3"/>
+	<widget source="lab1" conditional="lab1" render="Label" position="0,330" size="400,70" font="RegularBold;40" backgroundColor="OE_NewBg2" halign="center" valign="center" transparent="1" zPosition="3"/>
+	<widget source="lab2" conditional="lab2" render="Label" position="0,405" size="400,70" font="RegularBold;22" backgroundColor="OE_NewBg2" foregroundColor="blue_light" halign="center" valign="center" transparent="1" zPosition="3"/>
+	<widget source="lab3" conditional="lab3" render="Label" position="0,530" size="400,70" font="RegularBold;23" backgroundColor="OE_NewBg2" foregroundColor="blue_light" halign="center" valign="center" transparent="1" zPosition="3"/>
 	<!-- Button -->
   </screen>
 	<!-- INFORMATION STANDARD -->
@@ -352,12 +348,6 @@
 	<widget name="wizard" conditional="wizard" pixmap="picon_default.png" position="105,25" size="220,132" alphatest="blend" zPosition="10"/>
 	<widget source="Title" render="Label" backgroundColor="OE_Background" font="RegularBold;34" position="445,85" size="840,50" transparent="1" valign="center" zPosition="3" halign="left" foregroundColor="white"/>
 	<widget name="portpic" conditional="portpic" position="300,465" zPosition="10" size="150,150" transparent="1" alphatest="blend"/>
-	<widget source="lab1" conditional="lab1" render="Label" position="35,160" size="400,50" font="RegularBold;40" backgroundColor="OE_NewBg2" halign="center" valign="center" transparent="1" zPosition="3"/>
-	<widget source="lab2" conditional="lab2" render="Label" position="40,215" size="390,45" font="RegularBold;22" backgroundColor="OE_NewBg2" foregroundColor="blue_light" halign="left" valign="center" transparent="1" zPosition="3"/>
-	<widget source="lab3" conditional="lab3" render="Label" position="30,295" size="400,30" font="RegularBold;23" backgroundColor="OE_NewBg2" foregroundColor="blue_light" halign="center" valign="center" transparent="1" zPosition="3"/>
-	<widget source="lab4" conditional="lab4" render="Label" position="100,330" size="500,30" font="RegularBold;23" backgroundColor="OE_NewBg2" halign="left" valign="center" transparent="1" zPosition="3"/>
-	<widget source="lab5" conditional="lab5" render="Label" position="30,395" size="400,30" font="RegularBold;23" backgroundColor="OE_NewBg2" foregroundColor="blue_light" halign="center" valign="center" transparent="1" zPosition="3"/>
-	<widget source="lab6" conditional="lab6" render="Label" position="40,435" size="520,30" font="RegularBold;22" backgroundColor="OE_NewBg2" halign="left" valign="center" transparent="1" zPosition="3"/>
 	<ePixmap alphatest="blend" pixmap="buttons/key_red.png" position="70,1020" size="40,40" backgroundColor="OE_NewBg2"/>
 	<widget name="languagetext" conditional="languagetext" backgroundColor="OE_NewBg2" font="RegularBold;26" halign="left" valign="center" position="115,1020" size="245,40" transparent="1" zPosition="1"/>
 	<widget name="rc" conditional="rc" alphatest="blend" backgroundColor="transparent" pixmaps="rc.png,rcold.png" position="152,500" size="135,500" zPosition="10"/>
@@ -497,37 +487,40 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	<widget source="session.CurrentService" render="Progress" position="1385,495" size="495,15" backgroundColor="OE_NewBg2" foregroundColor="#00fafa" transparent="1" borderWidth="2" zPosition="6">
 	    <convert type="CpuUsage">$0</convert>
 	</widget>
-	<widget source="session.Event_Now" render="Label" position="1383,510" size="470,70" backgroundColor="OE_NewBg2" font="RegularBold;23" transparent="1" zPosition="6">
-	    <convert type="CpuUsage">CPU:$0 (Core #1: $1 Core #2: $2 Core #3: $3 Core #4: $4)</convert>
+	<widget source="session.Event_Now" render="Label" position="1383,510" size="200,25" backgroundColor="OE_NewBg2" font="RegularBold;21" transparent="1" zPosition="6">
+	    <convert type="CpuUsage">CPU:$0</convert>
+	</widget>
+	<widget source="session.Event_Now" render="Label" position="1383,535" size="540,25" backgroundColor="OE_NewBg2" font="RegularBold;20" transparent="1" zPosition="6">
+	    <convert type="CpuUsage">[Core1: $1 Core2: $2 Core3: $3 Core4: $4]</convert>
 	</widget>
 	<widget source="session.CurrentService" render="Progress" position="1385,580" size="495,15" backgroundColor="OE_NewBg2" foregroundColor="#00fafa" borderWidth="2" transparent="1" zPosition="5">
 	    <convert type="ProgressDiskSpaceInfo">MemTotal</convert>
 	</widget>
-	<widget source="session.CurrentService" render="Label" position="1385,595" size="495,70" backgroundColor="OE_NewBg2" font="RegularBold;21" transparent="1" zPosition="5">
+	<widget source="session.CurrentService" render="Label" position="1385,595" size="540,70" backgroundColor="OE_NewBg2" font="RegularBold;21" transparent="1" zPosition="5">
 	    <convert type="ProgressDiskSpaceInfo">MemTotal</convert>
 	</widget>
 	<widget source="session.CurrentService" render="Progress" position="1385,665" size="495,15" backgroundColor="OE_NewBg2" foregroundColor="#00fafa" borderWidth="2" transparent="1" zPosition="5">
 	    <convert type="ProgressDiskSpaceInfo">FleshInfo</convert>
 	</widget>
-	<widget source="session.CurrentService" render="Label" position="1385,680" size="515,70" backgroundColor="OE_NewBg2" font="RegularBold;21" transparent="1" zPosition="5">
+	<widget source="session.CurrentService" render="Label" position="1385,680" size="540,70" backgroundColor="OE_NewBg2" font="RegularBold;21" transparent="1" zPosition="5">
 	    <convert type="ProgressDiskSpaceInfo">FleshInfo</convert>
 	</widget>
 	<widget source="session.CurrentService" render="Progress" position="1385,750" size="495,15" backgroundColor="OE_NewBg2" foregroundColor="#00fafa" borderWidth="2" transparent="1" zPosition="5">
 	    <convert type="ProgressDiskSpaceInfo">SwapFree</convert>
 	</widget>
-	<widget source="session.CurrentService" render="Label" position="1385,765" size="515,70" backgroundColor="OE_NewBg2" font="RegularBold;21" transparent="1" zPosition="5">
+	<widget source="session.CurrentService" render="Label" position="1385,765" size="540,70" backgroundColor="OE_NewBg2" font="RegularBold;21" transparent="1" zPosition="5">
 	    <convert type="ProgressDiskSpaceInfo">SwapFree</convert>
 	</widget>
 	<widget source="session.CurrentService" render="Progress" position="1385,835" size="495,15" backgroundColor="OE_NewBg2" foregroundColor="#00fafa" borderWidth="2" transparent="1" zPosition="5">
 	    <convert type="ProgressDiskSpaceInfo">HddInfo</convert>
 	</widget>
-	<widget source="session.CurrentService" render="Label" position="1385,850" size="515,70" backgroundColor="OE_NewBg2" font="RegularBold;21" transparent="1" zPosition="5">
+	<widget source="session.CurrentService" render="Label" position="1385,850" size="540,70" backgroundColor="OE_NewBg2" font="RegularBold;21" transparent="1" zPosition="5">
 	    <convert type="ProgressDiskSpaceInfo">HddInfo</convert>
 	</widget>
 	<widget source="session.CurrentService" render="Progress" position="1385,920" size="495,15" backgroundColor="OE_NewBg2" foregroundColor="#00fafa" borderWidth="2" transparent="1" zPosition="5">
 	    <convert type="ProgressDiskSpaceInfo">UsbInfo</convert>
 	</widget>
-	<widget source="session.CurrentService" render="Label" position="1385,935" size="515,70" backgroundColor="OE_NewBg2" font="RegularBold;21" transparent="1" zPosition="5">
+	<widget source="session.CurrentService" render="Label" position="1385,935" size="540,70" backgroundColor="OE_NewBg2" font="RegularBold;21" transparent="1" zPosition="5">
 	    <convert type="ProgressDiskSpaceInfo">UsbInfo</convert>
 	</widget>
   </screen>
