@@ -318,12 +318,7 @@
 	<panel name="TitleInformation"/>
 	<panel name="ButtonsInformation"/>
 	<ePixmap alphatest="blend" pixmap="picon_default.png" position="85,150" size="220,132" transparent="1" zPosition="10"/>
-	<eLabel text="OpenVision" position="0,330" size="400,70" font="RegularBold;40" backgroundColor="OE_NewBg2" halign="center" valign="center" transparent="1" zPosition="3"/>
-	<eLabel text="Lets define enigma2 once more" position="0,405" size="400,70" font="RegularBold;21" backgroundColor="OE_NewBg2" foregroundColor="blue_light" halign="center" valign="center" transparent="1" zPosition="3"/>
-	<eLabel text="Report problems to:" position="0,530" size="400,70" font="RegularBold;23" backgroundColor="OE_NewBg2" foregroundColor="blue_light" halign="center" valign="center" transparent="1" zPosition="3"/>
-	<eLabel text="https://openvision.tech" position="0,590" size="400,70" font="RegularBold;23" backgroundColor="OE_NewBg2" halign="center" valign="center" transparent="1" zPosition="3"/>
-	<eLabel text="Sources are available at:" position="0,715" size="400,70" font="RegularBold;23" backgroundColor="OE_NewBg2" foregroundColor="blue_light" halign="center" valign="center" transparent="1" zPosition="3"/>
-	<eLabel text="https://github.com/OpenVisionE2" position="0,790" size="400,35" font="RegularBold;21" backgroundColor="OE_NewBg2" halign="center" valign="center" transparent="1" zPosition="3"/>
+	<eLabel text="OpenViX" position="0,330" size="400,70" font="RegularBold;40" backgroundColor="OE_NewBg2" halign="center" valign="center" transparent="1" zPosition="3"/>
   </screen>
 	<!-- INFORMATION STANDARD -->
   <screen name="TemplateInformation">
