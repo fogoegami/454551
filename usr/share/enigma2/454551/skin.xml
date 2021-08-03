@@ -275,6 +275,11 @@
 	<widget source="tunerstatusbar" render="Label" font="RegularBold;26" backgroundColor="OE_Background" position="97,230" size="1250,50" transparent="1" foregroundColor="green_light" valign="top"/>
 	<widget name="config" itemHeight="50" font="RegularBold;26" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="OE_Background" position="97,310" size="1250,690" transparent="1"/>
   </screen>
+  <screen name="PluginDownloadBrowserWizard" position="fill" backgroundColor="OE_NewBg2" flags="wfNoBorder">
+	<panel name="WizardPanel"/>
+	<widget name="text" position="500,420" size="920,250" zPosition="2" transparent="1" font="RegularBold;25" halign="center" valign="top"/>
+	<widget name="list" position="500,800" size="503,300" itemHeight="48" backgroundColor="OE_NewBg2" transparent="0" scrollbarMode="showOnDemand" zPosition="2" enableWrapAround="1"/>
+  </screen>
 	<!-- ##### WIZARD END ##### -->
 
 	<!-- GRAPHIC SWITCH -->
@@ -1771,7 +1776,7 @@
 	<widget name="description" conditional="description" position="1360,425" size="550,635" font="RegularBold;26" halign="center" valign="center" backgroundColor="OE_NewBg2" transparent="1" zPosition="2" />
   </screen>
 	<!-- HOTKEY SETUP -->
-  <screen name="HotkeySetup" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
+  <screen name="ButtonSetup" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
 	<panel name="StanDardScreen"/>
 	<panel name="TemplatePip"/>
 	<widget name="description" objectTypes="description,Button,Label" font="RegularBold;25" backgroundColor="OE_NewBg2" halign="center" position="1360,300" size="550,500" transparent="1" valign="center"/>
