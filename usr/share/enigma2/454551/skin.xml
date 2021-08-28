@@ -1801,11 +1801,9 @@
 	</screen>
 	<!-- HDMI CEC -->
 	<screen name="HdmiCECSetupScreen" title="HDMI CEC setup" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
-		<widget name="config" itemHeight="50" font="RegularBold;26" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="blue_light" backgroundColor="OE_Background" position="97,140" size="1250,750" transparent="1"/>
 		<panel name="StanDardScreen"/>
-		<eLabel backgroundColor="blue_light" name="" position="97,910" size="1250,2" zPosition="-9"/>
-		<widget source="current_address" render="Label" font="RegularBold;26" backgroundColor="OE_Background" foregroundColor="green_light" position="97,915" size="640,45" transparent="1"/>
-		<widget source="fixed_address" render="Label" font="RegularBold;26" backgroundColor="OE_Background" foregroundColor="blue_light" position="790,915" size="640,45" transparent="1"/>
+		<panel name="TemplatePip"/>
+		<widget name="config" itemHeight="50" font="RegularBold;26" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="blue_light" backgroundColor="OE_Background" position="97,140" size="1250,750" transparent="1"/>
 	</screen>
 	<!-- HELP MENU -->
 	<screen name="HelpMenu" backgroundColor="transparent" flags="wfNoBorder" position="0,center" size="1920,1080" transparent="0">
