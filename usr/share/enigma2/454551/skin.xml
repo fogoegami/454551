@@ -373,6 +373,7 @@
 	<!-- INFOBAR -->
 	<screen name="InfoBar" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080" title="InfoBar">
 		<panel name="poster_firstinfobar"/>
+		<panel name="ButtonsInfobar"/>
 		<eLabel backgroundColor="OE_ListBackground" name="InfoBar" position="15,852" size="1865,215" zPosition="-11"/>
 		<eLabel backgroundColor="blue_light" name="InfoBar" position="15,850" size="1865,2" zPosition="-11"/>
 		<eLabel backgroundColor="blue_light" name="InfoBar" position="15,850" size="2,215" zPosition="-11"/>
@@ -528,6 +529,7 @@
 	<!-- SECOND INFOBAR -->
 	<screen name="SecondInfoBar" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1920,1080" title="InfoBar">
 		<panel name="poster_secondinfobar"/>
+		<panel name="ButtonsSecondInfobar"/>
 		<eLabel backgroundColor="OE_ListBackground" name="InfoBar" position="10,160" size="1690,895" zPosition="-22" foregroundColor="white"/>
 		<eLabel backgroundColor="blue_light" name="" position="10,158" size="1690,2" zPosition="-22" foregroundColor="white"/>
 		<eLabel backgroundColor="blue_light" name="" position="10,1055" size="1690,2" zPosition="-22" foregroundColor="white"/>
@@ -672,7 +674,7 @@
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
 		<!-- CryptoInfo -->
-		<widget source="session.CurrentService" render="Label" font="RegularBold;21" position="470,1020" size="1210,35" zPosition="50" backgroundColor="OE_ListBackground" transparent="1" noWrap="1" valign="center" halign="left" foregroundColor="white">
+		<widget source="session.CurrentService" render="Label" font="RegularBold;21" position="670,965" size="1210,35" zPosition="50" backgroundColor="OE_ListBackground" transparent="1" noWrap="1" valign="center" halign="left" foregroundColor="white">
 			<convert type="CaidInfo2"/>
 		</widget>
 		<widget source="session.CurrentService" render="PicEmu2" path="454551/emu" position="540,965" size="98,31" transparent="1" alphatest="blend" zPosition="3"/>
@@ -1284,9 +1286,9 @@
 		<eLabel backgroundColor="blue_light" name="" position="80,142" size="570,2" zPosition="-9" foregroundColor="un5678a4"/>
 		<widget source="Title" render="Label" font="RegularBold;34" backgroundColor="OE_Background" position="680,85" size="830,50" transparent="1"/>
 		<widget backgroundColor="OE_Background" colorEventProgressbarBorder="OE_Selection" colorEventProgressbarBorderSelected="OE_Foreground" colorServiceDescription="#a4c400" colorServiceDescriptionSelected="OE_Foreground" foregroundColorServiceNotAvail="OE_Accent2" itemHeight="50" name="list" position="680,160" scrollbarMode="showNever" serviceItemHeight="50" serviceNumberFont="RegularBold;32" serviceNameFont="RegularBold;32" serviceInfoFont="RegularBold;27" size="1160,750" transparent="1" fieldMargins="15" nonplayableMargins="15" itemsDistances="8" progressBarWidth="70" progressPercentWidth="80" progressbarHeight="12"/>
-		<widget alphatest="blend" position="550,77" render="Picon" size="100,60" source="ServiceEvent" transparent="1" zPosition="2">
+		<!--widget alphatest="blend" position="550,77" render="Picon" size="100,60" source="ServiceEvent" transparent="1" zPosition="2">
 			<convert type="RefString">ServicelistRef</convert>
-		</widget>
+		</widget-->
 		<widget source="ServiceEvent" font="RegularBold;30" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=40,repeat=5,startdelay=2000,always=0" backgroundColor="OE_Background" foregroundColor="green_light" halign="left" position="80,150" size="570,45" transparent="1" valign="center">
 			<convert type="EventName">Name</convert>
 		</widget>
@@ -1310,9 +1312,9 @@
 		<widget backgroundColor="OE_Background" font="Regular;29" halign="left" position="80,260" options="movetype=running,startpoint=0,direction=top,steptime=100,startdelay=4000,wrap,always=0" render="RunningText" size="570,563" source="ServiceEvent" transparent="1" valign="top">
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
-		<widget source="ServiceEvent" render="NextEvents" position="80,835" size="570,110" noWrap="1" font="Regular;29" backgroundColor="OE_Background" foregroundColor="OE_Foreground" transparent="1" zPosition="5">
+		<!--widget source="ServiceEvent" render="NextEvents" position="80,835" size="570,110" noWrap="1" font="Regular;29" backgroundColor="OE_Background" foregroundColor="OE_Foreground" transparent="1" zPosition="5">
 			<convert type="ServiceName">Reference</convert>
-		</widget>
+		</widget-->
 		<eLabel backgroundColor="blue_light" name="" position="680,142" size="700,2" zPosition="-9" foregroundColor="un5678a4"/>
 		<eLabel backgroundColor="OE_Accent1" name="" position="80,830" size="570,1" zPosition="-9" foregroundColor="white"/>
 		<widget source="ServiceEvent" render="Label" font="RegularBold;28" backgroundColor="OE_NewBg2" foregroundColor="blue_light" position="80,953" size="570,45" transparent="1" zPosition="1">
@@ -1671,9 +1673,9 @@
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">NoSeconds</convert>
 		</widget>
-		<widget alphatest="blend" position="75,335" render="Picon" size="220,132" source="Title" transparent="1" zPosition="5">
+		<!--widget alphatest="blend" position="75,335" render="Picon" size="220,132" source="Title" transparent="1" zPosition="5">
 			<convert type="RefString">CurrentRef</convert>
-		</widget>
+		</widget-->
 		<ePixmap alphatest="blend" pixmap="my_icons/dolby_off.png" position="186,490" size="63,32" zPosition="1"/>
 		<widget alphatest="blend" pixmap="my_icons/dolby_on.png" position="186,490" render="Pixmap" size="63,32" source="session.CurrentService" zPosition="2">
 			<convert type="ServiceInfo">IsMultichannel</convert>
